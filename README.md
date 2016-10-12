@@ -40,6 +40,11 @@ The above works similarly to the following function call from SciPy:
     x = cho_solve(cho_factor(A, y)
 
 
+###  Timings for 7000x7000 matrix:
+
++ SciPy with MKL (sequential): 10.6s
++ cho_solve: 2.4s
+
 ###  Notes:
 
 Will probably break down if you pass views of arrays to function. Unliike the SciPy example, no checking for size or consistency is done.
