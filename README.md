@@ -30,5 +30,18 @@ The code should now be ready to use:
     # Solve A x = y
     x = cho_solve(A, y)
 
-###  The end:
+The above works similarly to the following function call from SciPy:
+
+    from scipy.linalg import cho_solve, cho_factor
+    
+    ...
+    
+    # Solve A x = y
+    x = cho_solve(cho_factor(A, y)
+
+
+###  Notes:
+
+Will probably break down if you pass views of arrays to function. Unliike the SciPy example, no checking for size or consistency is done.
+
 Happy cholesky'ing!
