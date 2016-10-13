@@ -28,7 +28,7 @@ The code should now be ready to use:
     ...
     
     # Solve A x = y
-    x = cho_solve(A, y)
+    x = cho_solver(A, y)
 
 The above works similarly to the following function call from SciPy:
 
@@ -37,7 +37,7 @@ The above works similarly to the following function call from SciPy:
     ...
     
     # Solve A x = y
-    x = cho_solve(cho_factor(A, y)
+    x = cho_solver(cho_factor(A, y)
 
 
 ###  Timings for 7000x7000 matrix:
